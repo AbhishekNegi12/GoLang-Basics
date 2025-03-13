@@ -29,42 +29,42 @@ func main() {
 
 	//Reading data from file buffer
 	/*
-	file, err := os.Open("abhi.txt")
-	if err != nil {
-		fmt.Println("Error while opening file:", err)
-		return
-	}
-	defer file.Close()
-	fmt.Println("Successfully creaated file")
-
-	//creating a buffer to read the file content
-	buffer := make([]byte, 1024)
-
-	//Read the file content into the buffer
-	for {
-		n, err := file.Read((buffer))
-		if err == io.EOF {
-			break
-		}
+		file, err := os.Open("abhi.txt")
 		if err != nil {
-			fmt.Println("Error while reading file:", err)
+			fmt.Println("Error while opening file:", err)
 			return
 		}
-		// fmt.Println("Error while Reading file")
+		defer file.Close()
+		fmt.Println("Successfully creaated file")
 
-		//Process the read content
-		fmt.Println(string(buffer[:n]))
-	}
+		//creating a buffer to read the file content
+		buffer := make([]byte, 1024)
+
+		//Read the file content into the buffer
+		for {
+			n, err := file.Read((buffer))
+			if err == io.EOF {
+				break
+			}
+			if err != nil {
+				fmt.Println("Error while reading file:", err)
+				return
+			}
+			// fmt.Println("Error while Reading file")
+
+			//Process the read content
+			fmt.Println(string(buffer[:n]))
+		}
 	*/
 
-	//Read the entire file into a byte slice 
+	//Read the entire file into a byte slice
 	//*******SHORTCUT METHOD*************
 
 	//now it is depriciated
 	// content,err := ioutil.ReadFile("abhi.txt")
 
-	content,err := os.ReadFile("abhi.txt")
-	if err !=nil{
+	content, err := os.ReadFile("abhi.txt")
+	if err != nil {
 		fmt.Println("Error while reading the file")
 		return
 	}
