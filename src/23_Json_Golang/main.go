@@ -32,4 +32,5 @@ func main() {
 		fmt.Println("Error Unmarshalling",err)
 	}
 	fmt.Println("person data is :",p1_data)
+	
 }
